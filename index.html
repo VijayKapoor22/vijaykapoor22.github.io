@@ -163,10 +163,41 @@ padding: 12px;
     <h2>Direkt Nachricht senden</h2>
 
  
-<p>E-Mail: kapoorvy@gmail.com</p>
 
-<a href="mailto:kapoorvy@gmail.com?subject=Fensterreinigung Anfrage">
-  <button>Nachricht senden</button>
+<div class="contact-box">
+  <h2>Direkt Nachricht senden</h2>
+
+  <label for="name">Name</label>
+  <input id="name" type="text" placeholder="Ihr Name">
+
+  <label for="email">E-Mail</label>
+  <input id="email" type="email" placeholder="Ihre E-Mail-Adresse">
+
+  <label for="message">Nachricht</label>
+  <textarea id="message" rows="4" placeholder="Ihre Nachricht"></textarea>
+
+  <button onclick="sendMail()">Nachricht senden</button>
+</div>
+
+<script>
+  function sendMail() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const subject = "Fensterreinigung Anfrage";
+    const body =
+      "Name: " + name + "\n" +
+      "E-Mail: " + email + "\n\n" +
+      "Nachricht:\n" + message;
+
+    window.location.href =
+      "mailto:kapoorvy@gmail.com" +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  }
+</script>
+
 </a>
 
 

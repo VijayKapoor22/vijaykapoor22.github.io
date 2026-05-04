@@ -195,11 +195,16 @@
 
 
 
+
 <script>
 function sendMail() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+  const nameField = document.getElementById("name");
+  const emailField = document.getElementById("email");
+  const messageField = document.getElementById("message");
+
+  const name = nameField.value;
+  const email = emailField.value;
+  const message = messageField.value;
 
   const subject = "Fensterreinigung Anfrage";
   const body =
@@ -207,12 +212,19 @@ function sendMail() {
     "E-Mail: " + email + "\n\n" +
     "Nachricht:\n" + message;
 
+  // Mailprogramm öffnen
   window.location.href =
     "mailto:kapoorvy@gmail.com" +
     "?subject=" + encodeURIComponent(subject) +
     "&body=" + encodeURIComponent(body);
+
+  // ✅ FELDER LEEREN
+  nameField.value = "";
+  emailField.value = "";
+  messageField.value = "";
 }
 </script>
+
 
 </a>
 
@@ -223,8 +235,8 @@ function sendMail() {
     <a href="datenschutz.html">Datenschutz</a>
     <a href="impressum.html">Impressum</a>
     <span>Kontakt</span>
-    <span>  Telefon: 0170 380 8667</span>
     <span>  kapoorvy@gmail.com</span>
+    <span>  Telefon: 0170 380 8667</span>
   </div>
 
 </div>

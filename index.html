@@ -60,35 +60,51 @@
       margin-bottom: 8px;
     }
 
-    /* KONTAKTBOX RECHTS UNTEN */
-    .contact-box {
-      position: absolute;
-      right: 40px;
-      bottom: 40px;
-      background: #0b3c78;
-      color: white;
-      padding: 26px;
-      width: 360px;
-      border-radius: 14px;
-      font-size: 19px;
-      font-weight: bold;
-    }
+    
+/* MODERNE, KLEINE KONTAKTBOX */
+.contact-box.modern {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  width: 260px;
+  background: rgba(19, 61, 122, 0.9);
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
 
-    .contact-box h2,
-    .contact-box p {
-      color: white;
-      margin-top: 0;
-    }
+.contact-box.modern h3 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
 
-    input, textarea {
-      width: 100%;
-      margin-top: 10px;
+.contact-box.modern input,
+.contact-box.modern textarea {
+  width: 100%;
+  padding: 7px 9px;
+  margin-bottom: 7px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
 
-padding: 12px;
-      border-radius: 6px;
-      border: none;
-      font-size: 17px;
-    }
+.contact-box.modern textarea {
+  resize: none;
+}
+
+.contact-box.modern button {
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #133d7a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 
     button {
       margin-top: 14px;
@@ -159,43 +175,37 @@ padding: 12px;
     </ul>
   </div>
 
-  <div class="contact-box">
-    <h2>Direkt Nachricht senden</h2>
+  
+<div class="contact-box modern">
+  <h3>Direkt Nachricht senden</h3>
 
- 
-
-<div class="contact-box">
-  <h2>Direkt Nachricht senden</h2>
-
-  <label for="name">Name</label>
-  <input id="name" type="text" placeholder="Ihr Name">
-
-  <label for="email">E-Mail</label>
-  <input id="email" type="email" placeholder="Ihre E-Mail-Adresse">
-
-  <label for="message">Nachricht</label>
-  <textarea id="message" rows="4" placeholder="Ihre Nachricht"></textarea>
+  <input id="name" type="text" placeholder="Name">
+  <input id="email" type="email" placeholder="E-Mail-Adresse">
+  <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
 
   <button onclick="sendMail()">Nachricht senden</button>
 </div>
+``
+
+
 
 <script>
-  function sendMail() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+function sendMail() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
 
-    const subject = "Fensterreinigung Anfrage";
-    const body =
-      "Name: " + name + "\n" +
-      "E-Mail: " + email + "\n\n" +
-      "Nachricht:\n" + message;
+  const subject = "Fensterreinigung Anfrage";
+  const body =
+    "Name: " + name + "\n" +
+    "E-Mail: " + email + "\n\n" +
+    "Nachricht:\n" + message;
 
-    window.location.href =
-      "mailto:kapoorvy@gmail.com" +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
-  }
+  window.location.href =
+    "mailto:kapoorvy@gmail.com" +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+}
 </script>
 
 </a>

@@ -164,15 +164,17 @@
     </ul>
   </div>
 
-  <div class="contact-box modern">
-    <h3>Direkt Nachricht senden</h3>
+  
+<div class="contact-box modern">
+  <h3>Direkt Nachricht senden</h3>
 
-    <input id="name" type="text" placeholder="Name">
-    <input id="email" type="email" placeholder="E-Mail-Adresse">
-    <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
+  <input id="name" type="text" placeholder="Name">
+  <input id="email" type="email" placeholder="E-Mail-Adresse">
+  <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
 
-    <button onclick="sendMail()">Nachricht senden</button>
-  </div>
+  <button type="button" onclick="sendMail()">Nachricht senden</button>
+</div>
+
 
   <div class="footer">
     <a href="datenschutz.html">Datenschutz</a>
@@ -183,14 +185,40 @@
 
 </div>
 
+
 <script>
 function sendMail() {
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
   const messageField = document.getElementById("message");
 
+  const name = nameField.value.trim();
+  const email = emailField.value.trim();
+  const message = messageField.value.trim();
+
+  if (!name || !email || !message) {
+    alert("Bitte füllen Sie alle Felder aus.");
+    return;
+  }
+
   const subject = "Fensterreinigung Anfrage";
   const body =
-    "Name: " + nameField.value + "\n" +
-    "E-Mail: " + emailField.value + "\n\n" +
-    "Nachricht:\n" + messageField.value;
+    "Name: " + name + "\n" +
+    "E-Mail: " + email + "\n\n" +
+    "Nachricht:\n" + message;
+
+  /* ✅ Felder SOFORT leeren */
+  nameField.value = "";
+  emailField.value = "";
+  messageField.value = "";
+
+  /* ✅ Mailprogramm leicht verzögert öffnen */
+  setTimeout(() => {
+    window.location.href =
+      "mailto:kapoorvy@gmail.com" +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  }, 150);
+}
+</script>
+

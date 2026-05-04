@@ -125,8 +125,9 @@
     }
     
 
+
 /* ==========================
-   MOBILE ANPASSUNG
+   MOBILE – TEXT SCHWARZ
    ========================== */
 @media (max-width: 768px) {
 
@@ -134,37 +135,41 @@
     padding: 20px;
   }
 
-  /* ✅ TEXT AUF HANDY SCHWARZ */
+  /* ALLE Texte auf Mobile SCHWARZ erzwingen */
+  body,
   .content,
   .content p,
   .content li,
-  .footer {
-    color: #000000;
-  }
-
-  h1, h2 {
-    color: #000000;
+  .content strong,
+  h1,
+  h2,
+  .footer,
+  .footer a {
+    color: #000000 !important;
   }
 
   .content {
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-top: 20px;
     max-width: 100%;
     font-size: 17px;
   }
 
   .contact-box.modern {
-    position: static;
+    position: static !important;
     width: 100%;
     margin-top: 20px;
   }
 
-  .footer {
-    position: static;
+
+  
+.footer {
+    position: static !important;
     margin-top: 20px;
     width: 100%;
   }
 }
+
 
 
   </style>

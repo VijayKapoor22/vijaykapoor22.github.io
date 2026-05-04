@@ -224,6 +224,38 @@
   }
 }
 
+
+/* ==========================
+   MOBILES TELEFON-SYMBOL
+   ========================== */
+
+/* Standard: auf PC NICHT sichtbar */
+.mobile-phone-icon {
+  display: none;
+}
+
+/* Nur auf Handy & Tablet sichtbar */
+@media (max-width: 768px) {
+
+  .mobile-phone-icon {
+    display: block;
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 36px;        /* Größe des Symbols */
+    color: #d60000;         /* ROT */
+    text-decoration: none;
+
+    z-index: 9999;
+  }
+
+  .mobile-phone-icon:active {
+    transform: scale(0.9);
+  }
+}
+
+
   </style>
 </head>
 
@@ -322,4 +354,10 @@ function sendMail() {
   }, 150);
 }
 </script>
+
+<!-- 📞 Mobiles rotes Telefon-Symbol (nur Handy & Tablet) -->
+<a href="tel:01703808667" class="mobile-phone-icon">📞</a>
+
+</body>
+</html>
 

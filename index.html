@@ -21,10 +21,10 @@
       box-sizing: border-box;
     }
 
-    /* Linker Textbereich */
+    /* LINKER TEXTBLOCK */
     .content {
-      max-width: 650px;
-      margin-left: 120px; /* ca. 3 cm */
+      max-width: 640px;
+      margin-left: 160px; /* ca. 3 cm weiter rechts */
       color: #0b3c78;
       font-size: 19px;
       font-weight: bold;
@@ -33,16 +33,21 @@
     h1 {
       font-size: 44px;
       margin-top: 0;
+      margin-bottom: 18px;
+      color: #0b3c78;
+      font-weight: bold;
+
+ }
+
+    h2 {
+      margin-top: 28px;
+      margin-bottom: 12px;
       color: #0b3c78;
       font-weight: bold;
     }
 
-   color: #0b3c78;
-      font-weight: bold;
-    }
-
     p {
-      line-height: 1.8;
+      line-height: 1.7;
       margin-bottom: 16px;
     }
 
@@ -56,14 +61,15 @@
       margin-bottom: 8px;
     }
 
-    /* Kontaktbox rechts unten */
+    /* KONTAKTBOX RECHTS UNTEN */
     .contact-box {
       position: absolute;
       right: 40px;
       bottom: 40px;
       background: #0b3c78;
       color: white;
-      padding: 26px;
+
+padding: 26px;
       width: 360px;
       border-radius: 14px;
       font-size: 19px;
@@ -72,8 +78,8 @@
 
     .contact-box h2,
     .contact-box p {
-
-     color: white;
+      color: white;
+      margin-top: 0;
     }
 
     input, textarea {
@@ -98,19 +104,19 @@
       font-weight: bold;
     }
 
-    /* Footer unten links */
+    /* FOOTER UNTEN LINKS – EINE ZEILE */
     .footer {
       position: absolute;
       left: 40px;
-      bottom: 20px;
-      font-size: 16px;
+      bottom: 18px;
+
+    font-size: 16px;
       font-weight: bold;
       color: #0b3c78;
     }
 
     .footer span {
-
-margin-right: 14px;
+      margin-right: 14px;
     }
   </style>
 </head>
@@ -124,18 +130,18 @@ margin-right: 14px;
     <h1>Wir lieben Fenster</h1>
 
     <p>
-      Wir bieten professionelle Fensterreinigung in Wiesbaden und Umgebung –<br>
+      Wir bieten professionelle Fensterreinigung in Wiesbaden und Umgebung<br>
       zuverlässig, gründlich und termingerecht.
     </p>
 
     <p>
-      Unsere Arbeit steht für streifenfreie Ergebnisse und<br>
-      faire, transparente Preise ab <strong>40 €</strong>.
+      Unsere Arbeit steht für streifenfreie Ergebnisse<br>
+      und faire, transparente Preise ab <strong>40 €</strong>.
     </p>
 
     <p>
-      Kontaktieren Sie uns für ein unverbindliches Angebot und<br>
-      genießen Sie wieder den klaren Durchblick.
+      Kontaktieren Sie uns für ein unverbindliches Angebot<br>
+      und genießen Sie wieder den klaren Durchblick.
     </p>
 
     <h2>Unsere Leistungen</h2>
@@ -143,17 +149,14 @@ margin-right: 14px;
       <li>🪟 Fensterreinigung innen &amp; außen</li>
       <li>🧽 Rahmen- &amp; Falzreinigung</li>
       <li>🚪 Glastüren</li>
-      <li>🌿 Wintergärten</li>
+
+  <li>🌿 Wintergärten</li>
       <li>🏬 Schaufenster</li>
       <li>🏠 Terrassenüberdachungen</li>
       <li>🏡 Vordächer</li>
       <li>🌇 Balkonverglasungen</li>
       <li>🪑 Fensterbänke</li>
-
-    h2 {
-      margin-top: 30px;
-
-   </ul>
+    </ul>
   </div>
 
   <!-- KONTAKTBOX -->
@@ -165,6 +168,7 @@ margin-right: 14px;
     <input type="email" placeholder="E-Mail">
     <textarea rows="4" placeholder="Nachricht"></textarea>
     <button>Nachricht senden</button>
+
   </div>
 
   <!-- FOOTER -->

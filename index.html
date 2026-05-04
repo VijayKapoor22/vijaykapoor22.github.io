@@ -21,10 +21,11 @@
       box-sizing: border-box;
     }
 
-    /* LINKER TEXT – 1 cm weiter rechts */
+    /* LINKER TEXTBLOCK */
     .content {
       max-width: 640px;
-      margin-left: 200px; /* +1 cm */
+      margin-left: 200px;
+      margin-top: 38px; /* ca. 1 cm nach unten */
       color: #0b3c78;
       font-size: 19px;
       font-weight: bold;
@@ -35,7 +36,6 @@
       margin-top: 0;
       margin-bottom: 18px;
       color: #0b3c78;
-      font-weight: bold;
     }
 
     h2 {
@@ -43,7 +43,6 @@
   margin-top: 28px;
       margin-bottom: 12px;
       color: #0b3c78;
-      font-weight: bold;
     }
 
     p {
@@ -72,8 +71,7 @@
       width: 360px;
       border-radius: 14px;
       font-size: 19px;
-
-   font-weight: bold;
+      font-weight: bold;
     }
 
     .contact-box h2,
@@ -85,7 +83,8 @@
     input, textarea {
       width: 100%;
       margin-top: 10px;
-      padding: 12px;
+
+padding: 12px;
       border-radius: 6px;
       border: none;
       font-size: 17px;
@@ -104,12 +103,11 @@
       font-weight: bold;
     }
 
-    /* FOOTER UNTEN LINKS – KLICKBAR */
+    /* FOOTER */
     .footer {
       position: absolute;
       left: 40px;
-
- bottom: 18px;
+      bottom: 18px;
       font-size: 16px;
       font-weight: bold;
       color: #0b3c78;
@@ -121,13 +119,13 @@
       margin-right: 14px;
     }
   </style>
+
 </head>
 
 <body>
 
 <div class="hero">
 
-  <!-- LINKER TEXT -->
   <div class="content">
     <h1>Wir lieben Fenster</h1>
 
@@ -138,14 +136,13 @@
 
     <p>
       Unsere Arbeit steht für streifenfreie Ergebnisse<br>
-      und faire, transparente Preise ab <strong>40 €</strong>.
+      und faire, transparente Preise ab <strong>40 €</strong>.
     </p>
 
     <p>
       Kontaktieren Sie uns für ein unverbindliches Angebot<br>
       und genießen Sie wieder den klaren Durchblick.
-
-  </p>
+    </p>
 
     <h2>Unsere Leistungen</h2>
     <ul>
@@ -161,10 +158,10 @@
     </ul>
   </div>
 
-  <!-- KONTAKTBOX -->
   <div class="contact-box">
     <h2>Direkt Nachricht senden</h2>
-    <p>E-Mail: kapoorvy@gmail.com</p>
+
+ <p>E-Mail: kapoorvy@gmail.com</p>
 
     <input type="text" placeholder="Name">
     <input type="email" placeholder="E-Mail">
@@ -172,18 +169,15 @@
     <button>Nachricht senden</button>
   </div>
 
-  <!-- FOOTER MIT LINKS -->
   <div class="footer">
     <a href="datenschutz.html">Datenschutz</a>
     <a href="impressum.html">Impressum</a>
     <span>Kontakt</span>
     <span>Telefon: 0170 380 8667</span>
-
-<span>kapoorvy@gmail.com</span>
+    <span>kapoorvy@gmail.com</span>
   </div>
 
 </div>
 
 </body>
 </html>
-``

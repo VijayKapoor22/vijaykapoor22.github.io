@@ -5,162 +5,125 @@
   <meta charset="UTF-8">
   <title>Wir lieben Fenster – Fensterreinigung</title>
 
-  
-<style>
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
 
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-  .hero {
-    min-height: 100vh;
-    background-image: url("fenster-neu.png");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding: 40px;
-    box-sizing: border-box;
-  }
+    .hero {
+      min-height: 100vh;
+      background-image: url("fenster-neu.png");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 40px;
+    }
 
-
-    /* LINKER TEXTBLOCK */
+    /* Linker Text */
     .content {
       max-width: 640px;
       margin-left: 200px;
-      margin-top: 38px; /* ca. 1 cm nach unten */
+      margin-top: 38px;
       color: #0b3c78;
       font-size: 19px;
       font-weight: bold;
-    }
+
+ }
 
     h1 {
-      font-size: 44px;
+      font-size: 42px;
       margin-top: 0;
-      margin-bottom: 18px;
-      color: #0b3c78;
     }
 
     h2 {
-
-  margin-top: 28px;
-      margin-bottom: 12px;
-      color: #0b3c78;
+      margin-top: 28px;
     }
 
     p {
       line-height: 1.7;
-      margin-bottom: 16px;
     }
 
     ul {
       list-style: none;
       padding-left: 0;
-      margin: 0;
     }
 
     ul li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
-/* WhatsApp-Hinweis */
-.whatsapp {
-  margin: 6px 0 10px 0;
-  font-size: 13px;
-  line-height: 1.4;
-}
+    /* Kontaktbox rechts unten */
+    .contact-box.modern {
+      position: absolute;
+      right: 28px;
+      bottom: 28px;
+      width: 260px;
 
-.whatsapp a {
-  color: #e6f0ff;
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-    
-/* MODERNE, KLEINE KONTAKTBOX */
-.contact-box.modern {
-  position: absolute;
-  right: 28px;
-  bottom: 28px;
-  width: 260px;
-  background: rgba(19, 61, 122, 0.9);
-  padding: 14px;
-  border-radius: 10px;
-  font-size: 14px;
-}
-
-.contact-box.modern h3 {
-  margin: 0 0 8px 0;
-  font-size: 15px;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.contact-box.modern input,
-.contact-box.modern textarea {
-  width: 100%;
-  padding: 7px 9px;
-  margin-bottom: 7px;
-  border-radius: 6px;
-  border: none;
-  font-size: 14px;
-}
-
-.contact-box.modern textarea {
-  resize: none;
-}
-
-.contact-box.modern button {
-  width: 100%;
-  padding: 7px;
-  font-size: 14px;
-  background: #ffffff;
-  color: #133d7a;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-
-    button {
-      margin-top: 14px;
-      width: 100%;
+   background: rgba(19, 61, 122, 0.9);
       padding: 14px;
-      font-size: 17px;
-      background: white;
-      color: #0b3c78;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .contact-box.modern h3 {
+      margin: 0 0 8px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .contact-box.modern input,
+    .contact-box.modern textarea {
+      width: 100%;
+      padding: 7px 9px;
+      margin-bottom: 7px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+    }
+
+    .contact-box.modern textarea {
+      resize: none;
+    }
+
+    .contact-box.modern button {
+      width: 100%;
+      padding: 7px;
+      font-size: 14px;
+      background: #ffffff;
+      color: #133d7a;
       border: none;
       border-radius: 6px;
       cursor: pointer;
-      font-weight: bold;
     }
 
-   
+    /* Footer unten links – alles fett */
+    .footer {
+      position: fixed;
+      left: 20px;
 
-.footer {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  z-index: 9999;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #0b3c78;
-}
+    bottom: 20px;
+      z-index: 9999;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #0b3c78;
+    }
 
-.footer a {
-  color: #0b3c78;
-  text-decoration: none;
-  margin-right: 10px;
-  font-weight: 600;
-}
-
+    .footer a {
+      color: #0b3c78;
+      text-decoration: none;
+      margin-right: 10px;
+      font-weight: bold;
+    }
   </style>
-
 </head>
 
 <body>
@@ -171,25 +134,25 @@
     <h1>Wir lieben Fenster</h1>
 
     <p>
-      Wir bieten professionelle Fensterreinigung<br>
-      in Wiesbaden und Umgebung an:<br>
+      Wir bieten professionelle Fensterreinigung in Wiesbaden und Umgebung an:<br>
       zuverlässig, gründlich und termingerecht.
     </p>
 
     <p>
       Unsere Arbeit steht für streifenfreie Ergebnisse<br>
-      und faire, transparente Preise ab <strong>40 €</strong>.
+
+  und faire, transparente Preise ab <strong>40&nbsp;€</strong>.
     </p>
 
     <p>
-      Kontaktieren Sie uns für ein unverbindliches<br>
-      Angebot und genießen Sie wieder klaren Sicht.
+      Kontaktieren Sie uns für ein unverbindliches Angebot<br>
+      und genießen Sie wieder klaren Sicht.
     </p>
 
     <h2>Unsere Leistungen</h2>
     <ul>
-      <li>🪟 Fensterreinigung innen &amp; außen</li>
-      <li>🧽 Rahmen- &amp; Falzreinigung</li>
+      <li>🪟 Fensterreinigung innen & außen</li>
+      <li>🧽 Rahmen- & Falzreinigung</li>
       <li>🚪 Glastüren</li>
       <li>🌿 Wintergärten</li>
       <li>🏬 Schaufenster</li>
@@ -200,38 +163,24 @@
     </ul>
   </div>
 
-  
-<div class="contact-box modern">
-  <h3>Direkt Nachricht senden</h3>
+  <div class="contact-box modern">
+    <h3>Direkt Nachricht senden</h3>
 
-  <input id="name" type="text" placeholder="Name">
-  <input id="email" type="email" placeholder="E-Mail-Adresse">
-  <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
+    <input id="name" type="text" placeholder="Name">
+    <input id="email" type="email" placeholder="E-Mail-Adresse">
+    <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
 
-<div class="contact-box modern">
-  <h3>Direkt Nachricht senden</h3>
+    <button onclick="sendMail()">Nachricht senden</button>
+  </div>
 
-  <input id="name" type="text" placeholder="Name">
-  <input id="email" type="email" placeholder="E-Mail-Adresse">
-  <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
+  <div class="footer">
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="impressum.html">Impressum</a>
+    Kontakt&nbsp;kapoorvy@gmail.com&nbsp;Telefon:&nbsp;0170&nbsp;380&nbsp;8667  Gerne auch über WhatsApp
 
-  <!-- ✅ HIER IST WHATSAPP -->
-  <p class="whatsapp">
-    Auch per WhatsApp erreichbar:<br>
-    <a href="https://wa.me/491703808667" target="_blank">
-      Jetzt per WhatsApp schreiben
-    </a>
-  </p>
+ </div>
 
-  <button onclick="sendMail()">Nachricht senden</button>
 </div>
-
-  <button onclick="sendMail()">Nachricht senden</button>
-</div>
-``
-
-
-
 
 <script>
 function sendMail() {
@@ -239,44 +188,8 @@ function sendMail() {
   const emailField = document.getElementById("email");
   const messageField = document.getElementById("message");
 
-  const name = nameField.value;
-  const email = emailField.value;
-  const message = messageField.value;
-
   const subject = "Fensterreinigung Anfrage";
   const body =
-    "Name: " + name + "\n" +
-    "E-Mail: " + email + "\n\n" +
-    "Nachricht:\n" + message;
-
-  // Mailprogramm öffnen
-  window.location.href =
-    "mailto:kapoorvy@gmail.com" +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body);
-
-  // ✅ FELDER LEEREN
-  nameField.value = "";
-  emailField.value = "";
-  messageField.value = "";
-}
-</script>
-
-
-</a>
-
-
-  </div>
-
-  <div class="footer">
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="impressum.html">Impressum</a>
-    <span>Kontakt</span>
-    <span>  kapoorvy@gmail.com</span>
-    <span>  Telefon: 0170 380 8667</span>
-  </div>
-
-</div>
-
-</body>
-</html>
+    "Name: " + nameField.value + "\n" +
+    "E-Mail: " + emailField.value + "\n\n" +
+    "Nachricht:\n" + messageField.value;

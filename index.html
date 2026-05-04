@@ -11,22 +11,21 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* Hintergrundbild */
+    /* Vollbild-Hintergrund */
     .hero {
       min-height: 100vh;
       background-image: url("fenster.png");
       background-size: cover;
       background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: relative;
       padding: 40px;
       box-sizing: border-box;
     }
 
-    /* Inhalt links */
+    /* Linker Textbereich */
     .content {
       max-width: 650px;
+      margin-left: 120px; /* Abstand nach den Gardinen */
       color: #0b3c78;
       font-size: 18px;
     }
@@ -49,34 +48,36 @@
     }
 
     ul {
-      padding-left: 0;
       list-style: none;
+      padding-left: 0;
     }
 
     ul li {
       margin-bottom: 6px;
     }
 
-    /* Kontaktbox RECHTS – gut sichtbar */
+    /* Kontaktbox rechts unten */
     .contact-box {
-      margin-left: 50px;
-      background: rgba(11, 60, 120, 0.95);
+      position: absolute;
+      right: 40px;
+      bottom: 40px;
+      background: #0b3c78;
       color: white;
       padding: 25px;
-      width: 320px;
-      border-radius: 12px;
+      width: 340px;
+
+ border-radius: 12px;
       font-size: 18px;
     }
 
     .contact-box h2 {
-      color: white;
       margin-top: 0;
+      color: white;
     }
 
     .contact-box p {
       color: white;
-
- }
+    }
 
     input, textarea {
       width: 100%;
@@ -91,28 +92,30 @@
       margin-top: 12px;
       width: 100%;
       padding: 12px;
-      background: #ffffff;
+      font-size: 16px;
+      background: white;
       color: #0b3c78;
       border: none;
       border-radius: 4px;
-      font-size: 16px;
       cursor: pointer;
       font-weight: bold;
+
+ }
+
+    /* Footer links unten */
+    .footer {
+      position: absolute;
+      left: 40px;
+      bottom: 20px;
+      font-size: 16px;
     }
 
-    a {
+    .footer a {
+      display: block;
       color: #0b3c78;
       font-weight: bold;
-    }
-
-    /* Layout */
-    .layout {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-
- flex-wrap: wrap;
+      text-decoration: none;
+      margin-bottom: 6px;
     }
   </style>
 </head>
@@ -121,61 +124,59 @@
 
 <div class="hero">
 
-  <div class="layout">
+  <!-- LINKER INHALT -->
+  <div class="content">
+    <h1>Wir lieben Fenster</h1>
 
-    <!-- LINKER INHALT -->
-    <div class="content">
-      <h1>Wir lieben Fenster</h1>
+    <p>
+      Wir bieten professionelle Fensterreinigung in Wiesbaden und Umgebung –
+      zuverlässig, gründlich und termingerecht.
+    </p>
 
-      <p>
-        Wir bieten professionelle Fensterreinigung in Wiesbaden und Umgebung –
-        zuverlässig, gründlich und termingerecht.
-      </p>
+    <p>
+      Unsere Arbeit steht für streifenfreie Ergebnisse und faire,
+      transparente Preise ab <strong>40 €</strong>.
 
-      <p>
-        Unsere Arbeit steht für streifenfreie Ergebnisse und faire,
-        transparente Preise ab <strong>40 €</strong>.
-      </p>
+</p>
 
-      <p>
-        Kontaktieren Sie uns für ein unverbindliches Angebot
-        und genießen Sie wieder den klaren Durchblick.
-      </p>
+    <p>
+      Kontaktieren Sie uns für ein unverbindliches Angebot
+      und genießen Sie wieder den klaren Durchblick.
+    </p>
 
-      <h2>Unsere Leistungen</h2>
-      <ul>
-        <li>🪟 Fensterreinigung innen &amp; außen</li>
-        <li>🧽 Rahmen- &amp; Falzreinigung</li>
-        <li>🚪 Glastüren</li>
-        <li>🌿 Wintergärten</li>
-        <li>🏬 Schaufenster</li>
+    <h2>Unsere Leistungen</h2>
+    <ul>
+      <li>🪟 Fensterreinigung innen &amp; außen</li>
+      <li>🧽 Rahmen- &amp; Falzreinigung</li>
+      <li>🚪 Glastüren</li>
+      <li>🌿 Wintergärten</li>
+      <li>🏬 Schaufenster</li>
+      <li>🏠 Terrassenüberdachungen</li>
+      <li>🏡 Vordächer</li>
+      <li>🌇 Balkonverglasungen</li>
+      <li>🪑 Fensterbänke</li>
+    </ul>
 
- <li>🏠 Terrassenüberdachungen</li>
-        <li>🏡 Vordächer</li>
-        <li>🌇 Balkonverglasungen</li>
-        <li>🪑 Fensterbänke</li>
-      </ul>
+    <h2>Kontakt</h2>
+    <p>Telefon: <strong>0170 380 8667</strong></p>
+    <p>E-Mail: <strong>kapoorvy@gmail.com</strong></p>
+  </div>
 
-      <h2>Kontakt</h2>
-      <p>Telefon: 0123 456789</p>
-      <p>E-Mail: kapoorvy@gmail.com</p>
+  <!-- KONTAKTBOX RECHTS UNTEN -->
+  <div class="contact-box">
+    <h2>Direkt Nachricht senden</h2>
+    <p>E-Mail: kapoorvy@gmail.com</p>
 
-      <p>
-        <a href="impressum.html">Impressum</a> |
-        <a href="datenschutz.html">Datenschutz</a>
-      </p>
-    </div>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="E-Mail">
+    <textarea rows="4" placeholder="Nachricht"></textarea>
+    <button>Nachricht senden</button>
+  </div>
 
-    <!-- RECHTE SEITE – KONTAKT -->
-    <div class="contact-box">
-      <h2>Direkt Nachricht senden</h2>
-      <p>E-Mail: kapoorvy@gmail.com</p>
-
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="E-Mail">
-      <textarea rows="4" placeholder="Nachricht"></textarea>
-      <button>Nachricht senden</button>
-    </div>
+  <!-- FOOTER LINKS UNTEN -->
+  <div class="footer">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
 
   </div>
 

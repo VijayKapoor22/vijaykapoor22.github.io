@@ -6,11 +6,80 @@
   <title>Wir lieben Fenster – Fensterreinigung</title>
 
 <style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f6f8fa;
+  
+body {
     margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .hero {
+    min-height: 100vh;
+    background-image: url("fenster.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 40px;
+    max-width: 1200px;
+    width: 100%;
+    color: white;
+    border-radius: 12px;
+  }
+
+  .layout {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .left, .right {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin-top: 0;
+  }
+
+  h2 {
+
+ margin-top: 30px;
+  }
+
+  p, li {
+    line-height: 1.6;
+    color: #f0f0f0;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  button {
+    margin-top: 12px;
+    padding: 12px;
+    background: #1f3a5f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  a {
+    color: #aad4ff;
+  }
+</style>
+
   }
 
   .container {
@@ -42,33 +111,60 @@
 </style>
  </head>
 <body>
-  <div class="container">
-  <h1>Wir lieben Fenster</h1>
-<img src="fenster.png" alt="Saubere Fenster – Wir lieben Fenster" width="400">
-  <p>
-    Professionelle Fensterreinigung für Privat- und Geschäftskunden.
-    Sauber, zuverlässig und gründlich.
-  </p>
+  
+<div class="hero">
+  <div class="overlay">
 
-  <h2>Unsere Leistungen</h2>
-  <ul>
-    <li>Fenster- und Glasreinigung</li>
-    <li>Rahmen- und Falzenreinigung</li>
-    <li>Wintergärten</li>
-    <li>Schaufenster</li>
-  </ul>
+    <div class="layout">
 
-  <h2>Kontakt</h2>
-  <p>Telefon: 0123 456789</p>
-  <p>E-Mail: info@wirliebenfenster.com</p>
-<hr>
+      <!-- LINKE SEITE -->
+      <div class="left">
+        <h1>Wir lieben Fenster</h1>
 
-<p>
-  <a href="impressum.html">Impressum</a> |
-  <a href="datenschutz.html">Datenschutz</a>
-</p>
+        <p>
+          Professionelle Fensterreinigung für Privat- und Geschäftskunden.
+          Sauber, zuverlässig und gründlich.
+        </p>
+
+        <h2>Unsere Leistungen</h2>
+        <ul>
+          <li>Fenster- und Glasreinigung</li>
+          <li>Rahmen- und Falzenreinigung</li>
+          <li>Wintergärten</li>
+          <li>Schaufenster</li>
+        </ul>
+
+        <h2>Kontakt</h2>
+        <p>Telefon: 0123 456789</p>
+        <p>E-Mail: info@wirliebenfenster.com</p>
+
+        <p>
+          impressum.htmlImpressum</a> |
+          datenschutz.htmlDatenschutz</a>
+        </p>
+      </div>
+
+      <!-- RECHTE SEITE: MAIL -->
+
+<div class="right">
+        <h2>Direkt Nachricht senden</h2>
+
+        <form action="mailto:kapoorvy@gmail.com" method="post" enctype="text/plain">
+          <label>Name</label>
+          
+          <label>E-Mail</label>
+          
+          <label>Nachricht</label>
+          
+          <button type="submit">Nachricht senden</button>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
 </div>
-</body>
 
+</body>
 </html>
-``

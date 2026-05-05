@@ -4,40 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Wir lieben Fenster – Fensterreinigung</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    *, *::before, *::after {
+    * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
     }
+
+    /* ==========================
+       DESKTOP DESIGN (SO WIE ES WAR)
+       ========================== */
 
     .hero {
       min-height: 100vh;
-      background-image: url("fenster-neu.png");
+      background-image: url("DEIN_BISHERIGES_DESKTOP_BILD.jpg");
       background-size: cover;
       background-position: center;
-      position: relative;
       padding: 40px;
     }
 
-    /* Linker Text */
     .content {
       max-width: 640px;
-      margin-left: 200px;
-      margin-top: 38px;
       color: #0b3c78;
-      font-size: 19px;
+      font-size: 18px;
       font-weight: bold;
-
- }
+    }
 
     h1 {
       font-size: 42px;
-      margin-top: 0;
+
+ margin-top: 0;
     }
 
     h2 {
@@ -57,44 +59,37 @@
       margin-bottom: 6px;
     }
 
-    /* Kontaktbox rechts unten */
     .contact-box.modern {
       position: absolute;
       right: 28px;
       bottom: 28px;
-      width: 260px;
-
-   background: rgba(19, 61, 122, 0.9);
-      padding: 14px;
+      width: 280px;
+      background: rgba(19, 61, 122, 0.9);
+      padding: 16px;
       border-radius: 10px;
       font-size: 14px;
-    }
+      color: #ffffff;
+
+ }
 
     .contact-box.modern h3 {
-      margin: 0 0 8px 0;
-      font-size: 15px;
-      font-weight: 600;
-      color: #ffffff;
+      margin-top: 0;
+      font-size: 16px;
     }
 
     .contact-box.modern input,
     .contact-box.modern textarea {
       width: 100%;
-      padding: 7px 9px;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
+      padding: 8px;
       border-radius: 6px;
       border: none;
       font-size: 14px;
     }
 
-    .contact-box.modern textarea {
-      resize: none;
-    }
-
     .contact-box.modern button {
       width: 100%;
-      padding: 7px;
-      font-size: 14px;
+      padding: 8px;
       background: #ffffff;
       color: #133d7a;
       border: none;
@@ -102,240 +97,141 @@
       cursor: pointer;
     }
 
-    /* Footer unten links – alles fett */
     .footer {
       position: fixed;
       left: 20px;
-
-    bottom: 20px;
-      z-index: 9999;
-      background: rgba(255, 255, 255, 0.85);
+      bottom: 20px;
+      background: rgba(255,255,255,0.85);
       padding: 8px 12px;
       border-radius: 8px;
       font-size: 14px;
       font-weight: bold;
       color: #0b3c78;
-    }
+
+}
 
     .footer a {
       color: #0b3c78;
-      text-decoration: none;
       margin-right: 10px;
+      text-decoration: none;
       font-weight: bold;
     }
-    
 
+    /* ==========================
+       HANDY & TABLET – KOMPLETT NEU (STABIL ✅)
+       ========================== */
 
+    @media (max-width: 1024px) {
 
-  .contact-box.modern {
-    position: static !important;
-    width: 100%;
-    margin-top: 20px;
+      .hero {
+        background: none !important;
+        padding: 20px;
+        min-height: auto;
+      }
+
+      .content {
+        max-width: 100%;
+        font-size: 16px;
+        color: #000000;
+        font-weight: normal;
+      }
+
+      h1 {
+        font-size: 26px;
+        color: #000000;
+      }
+
+      h2 {
+        font-size: 20px;
+        color: #000000;
+
   }
 
+      p, li {
+        color: #000000;
+      }
 
-  
-.footer {
-    position: static !important;
-    margin-top: 20px;
-    width: 100%;
-  }
-}
+      .contact-box.modern {
+        position: relative;
+        width: 100%;
+        margin-top: 24px;
+        background: #f5f5f5;
+        color: #000000;
+      }
 
-/* ==========================
-   HANDY & TABLET – KOMPLETT NEU
-   ========================== */
+      .contact-box.modern h3 {
+        color: #000000;
+      }
 
-@media (max-width: 1024px) {
+      .contact-box.modern input,
+      .contact-box.modern textarea {
+        border: 1px solid #cccccc;
+        color: #000000;
+      }
 
-  /* Grundlayout */
-  body {
-    background: #ffffff;
-  }
+      .footer {
+        position: relative;
+        margin-top: 30px;
+        background: #ffffff;
+        color: #000000;
+      }
 
-  .hero {
-    background: none !important;
-    padding: 20px;
-    min-height: auto;
-  }
-
-  /* Inhalt */
-  .content {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    color: #000000;
-    font-size: 16px;
-  }
-
-  h1 {
-    font-size: 26px;
-    color: #000000;
-    margin-bottom: 12px;
-  }
-
-  h2 {
-    font-size: 20px;
-    color: #000000;
-    margin-top: 24px;
-  }
-
-  p {
-    color: #000000;
-
-
-  line-height: 1.6;
-  }
-
-  ul li {
-    color: #000000;
-  }
-
-  /* Kontaktbox */
-  .contact-box.modern {
-    position: relative;
-    width: 100%;
-    margin-top: 24px;
-    background: #f5f5f5;
-    color: #000000;
-  }
-
-  .contact-box.modern h3 {
-    color: #000000;
-  }
-
-  .contact-box.modern input,
-  .contact-box.modern textarea {
-    border: 1px solid #cccccc;
-    color: #000000;
-  }
-
-  /* Footer */
-  .footer {
-    position: relative;
-    margin-top: 30px;
-    background: #ffffff;
-
-color: #000000;
-    font-size: 14px;
-  }
-
-  .footer a {
-    color: #000000;
-    font-weight: bold;
-  }
-
-  /* 🚫 KEIN Telefon-Symbol hier */
-  .mobile-phone-icon {
-    display: none !important;
-  }
-}
-
-
+      .footer a {
+        color: #000000;
+      }
+    }
   </style>
+
 </head>
 
 <body>
 
-<div class="hero">
+  <div class="hero">
 
-  <div class="content">
-    <h1>Wir lieben Fenster</h1>
+    <div class="content">
+      <h1>Wir lieben Fenster</h1>
 
-    <p>
-      Wir bieten professionelle Fensterreinigung<br>
-      in Wiesbaden und Umgebung an:<br>
-      zuverlässig, gründlich und termingerecht.
-    </p>
+      <p>
+        Wir bieten professionelle Fensterreinigung in Wiesbaden und Umgebung an –<br>
+        zuverlässig, gründlich und termingerecht.
+      </p>
 
-    <p>
-      Unsere Arbeit steht für streifenfreie Ergebnisse<br>
+      <p>
+        Unsere Arbeit steht für streifenfreie Ergebnisse<br>
+        sowie faire und transparente Preise ab <strong>40 €</strong>.
+      </p>
 
-  und faire, transparente Preise ab <strong>40&nbsp;€</strong>.
-    </p>
+      <p>
+        Kontaktieren Sie uns für ein unverbindliches Angebot<br>
+        und genießen Sie wieder <strong>klare Sicht</strong>.
+      </p>
 
-    <p>
-      Kontaktieren Sie uns für ein unverbindliches<br>
-      Angebot und genießen Sie wieder klare Sicht.
-    </p>
+      <h2>Unsere Leistungen</h2>
+      <ul>
+        <li>🪟 Fensterreinigung innen & außen</li>
+        <li>🧽 Rahmen- & Falzreinigung</li>
+        <li>🚪 Glastüren</li>
+        <li>🌿 Wintergärten</li>
+        <li>🏬 Schaufenster</li>
+      </ul>
+    </div>
 
-    <h2>Unsere Leistungen</h2>
-    <ul>
-      <li>🪟 Fensterreinigung innen & außen</li>
-      <li>🧽 Rahmen- & Falzreinigung</li>
-      <li>🚪 Glastüren</li>
-      <li>🌿 Wintergärten</li>
-      <li>🏬 Schaufenster</li>
-      <li>🏠 Terrassenüberdachungen</li>
-      <li>🏡 Vordächer</li>
-      <li>🌇 Balkonverglasungen</li>
-      <li>🪑 Fensterbänke</li>
-    </ul>
+    <div class="contact-box modern">
+      <h3>Direkt Nachricht senden</h3>
+      <input type="text" placeholder="Name">
+
+  <input type="email" placeholder="E-Mail">
+      <textarea rows="3" placeholder="Nachricht"></textarea>
+      <button>Nachricht senden</button>
+    </div>
+
+    <div class="footer">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+      Kontakt: kapoorvy@gmail.com · Telefon: 0170 380 8667
+    </div>
+
   </div>
-
-  
-<div class="contact-box modern">
-  <h3>Direkt Nachricht senden</h3>
-
-  <input id="name" type="text" placeholder="Name">
-  <input id="email" type="email" placeholder="E-Mail-Adresse">
-  <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
-
-  <button type="button" onclick="sendMail()">Nachricht senden</button>
-</div>
-
-
-  <div class="footer">
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="impressum.html">Impressum</a>
-    Kontakt:&nbsp;kapoorvy@gmail.com&nbsp;Telefon:&nbsp;0170&nbsp;380&nbsp;8667  Gerne auch über WhatsApp
-
- </div>
-
-</div>
-
-
-<script>
-function sendMail() {
-  const nameField = document.getElementById("name");
-  const emailField = document.getElementById("email");
-  const messageField = document.getElementById("message");
-
-  const name = nameField.value.trim();
-  const email = emailField.value.trim();
-  const message = messageField.value.trim();
-
-  if (!name || !email || !message) {
-    alert("Bitte füllen Sie alle Felder aus.");
-    return;
-  }
-
-  const subject = "Fensterreinigung Anfrage";
-  const body =
-    "Name: " + name + "\n" +
-    "E-Mail: " + email + "\n\n" +
-    "Nachricht:\n" + message;
-
-  /* ✅ Felder SOFORT leeren */
-  nameField.value = "";
-  emailField.value = "";
-  messageField.value = "";
-
-  /* ✅ Mailprogramm leicht verzögert öffnen */
-  setTimeout(() => {
-    window.location.href =
-      "mailto:kapoorvy@gmail.com" +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
-  }, 150);
-}
-</script>
-
-
-<!-- 📞 Mobiler Anruf-Button -->
-<a href03808667☎</a>
-
 
 </body>
 </html>
-

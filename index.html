@@ -100,24 +100,33 @@
       cursor: pointer;
     }
 
-    
+    /* ✅ SAUBERER FOOTER */
+    .footer {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      z-index: 9999;
+      max-width: 420px;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #0b3c78;
+    }
 
-div class="footer">
-  <div class="footer-links">
-    <a href="datenschutz.html">Datenschutz</a>
-    <span>·</span>
-    <a href="impressum.html">Impressum</a>
-  </div>
+    .footer a {
+      color: #0b3c78;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-  <div class="footer-contact">
-    Kontakt:
-    <a href="mailto:kapoorvy@gmail.com">kapoorvy@gmail.com</a>
-    ·
-    <a href="tel:01703808667">0170&nbsp;380&nbsp;8667</a>
-    · WhatsApp möglich
-  </div>
-</div>
+    .footer a:hover {
+      text-decoration: underline;
+    }
 
+    .footer-line {
+      margin-bottom: 4px;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -159,26 +168,30 @@ div class="footer">
     </ul>
   </div>
 
-  
-<div class="contact-box modern">
-  <h3>Direkt Nachricht senden</h3>
-
-  <input id="name" type="text" placeholder="Name">
-  <input id="email" type="email" placeholder="E-Mail-Adresse">
-  <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
-
-  <button type="button" onclick="sendMail()">Nachricht senden</button>
-</div>
-
+  <div class="contact-box modern">
+    <h3>Direkt Nachricht senden</h3>
+    <input id="name" type="text" placeholder="Name">
+    <input id="email" type="email" placeholder="E-Mail-Adresse">
+    <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
+    <button type="button" onclick="sendMail()">Nachricht senden</button>
+  </div>
 
   <div class="footer">
-    datenschutz.htmlDatenschutz</a>
-    impressum.html>
-    Kontakt&nbsp;kapoorvy@gmail.com&nbsp;Telefon:&nbsp;0170&nbsp;380&nbsp;8667  Gerne auch über WhatsApp
+    <div class="footer-line">
+      <a href="datenschutz.html">Datenschutz</a>
+      ·
+      <a href="impressum.html">Impressum</a>
+    </div>
+    <div class="footer-line">
+      Kontakt:
+      <a href="mailto:kapoorvy@gmail.com">kapoorvy@gmail.com</a>
+      ·
+      <a href="tel:01703808667">0170&nbsp;380&nbsp;8667</a>
+      · WhatsApp möglich
+    </div>
   </div>
 
 </div>
-
 
 <script>
 function sendMail() {
@@ -201,12 +214,10 @@ function sendMail() {
     "E-Mail: " + email + "\n\n" +
     "Nachricht:\n" + message;
 
-  /* ✅ Felder SOFORT leeren */
   nameField.value = "";
   emailField.value = "";
   messageField.value = "";
 
-  /* ✅ Mailprogramm leicht verzögert öffnen */
   setTimeout(() => {
     window.location.href =
       "mailto:kapoorvy@gmail.com" +
@@ -216,6 +227,6 @@ function sendMail() {
 }
 </script>
 
-
 </body>
 </html>
+``

@@ -25,13 +25,18 @@
     }
 
     /* Linker Text */
-    .content {
-      max-width: 640px;
-      margin-left: 200px;
-      margin-top: 38px;
-      color: #0b3c78;
-      font-size: 19px;
-      font-weight: bold;
+    
+.content {
+  max-width: 640px;
+
+  /* ✅ Verschiebung wie gewünscht */
+  margin-left: calc(200px + 0.4cm);  /* 0,4 cm nach rechts */
+  margin-top: calc(38px + 1cm);      /* 1 cm nach unten */
+
+  color: #0b3c78;
+  font-size: 19px;
+  font-weight: bold;
+
     }
 
     h1 {

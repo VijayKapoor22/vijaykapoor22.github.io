@@ -55,7 +55,6 @@
       margin-bottom: 6px;
     }
 
-    /* ✅ Vertrauenssatz – sauber integriert */
     .trust-text {
       margin-top: 10px;
       font-size: 18px;
@@ -63,7 +62,6 @@
       color: #0b3c78;
     }
 
-    /* Kontaktbox */
     .contact-box.modern {
       position: absolute;
       right: 28px;
@@ -107,7 +105,6 @@
       cursor: pointer;
     }
 
-    /* Footer */
     .footer {
       position: fixed;
       left: 20px;
@@ -136,7 +133,6 @@
       white-space: nowrap;
     }
 
-    /* ✅ Mobile optimiert */
     @media (max-width: 1024px) {
 
       .hero {
@@ -235,13 +231,13 @@
 
   <div class="footer">
     <div class="footer-line">
-      <a href="datenschutz.html">Datenschutz</a> ·
-      <a href="impressum.html">Impressum</a>
+      datenschutz.htmlDatenschutz</a> ·
+      impressum.htmlImpressum</a>
     </div>
     <div class="footer-line">
       Kontakt:
-      <a href="mailto:kapoorvy@gmail.com">kapoorvy@gmail.com</a> ·
-      <a href="tel:01703808667">0170&nbsp;380&nbsp;8667</a> · WhatsApp möglich
+      kapoorvy@gmail.comkapoorvy@gmail.com</a> ·
+      tel:017038086670170&nbsp;380&nbsp;8667</a> · WhatsApp möglich
     </div>
   </div>
 
@@ -249,9 +245,13 @@
 
 <script>
 function sendMail() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+  const nameField = document.getElementById("name");
+  const emailField = document.getElementById("email");
+  const messageField = document.getElementById("message");
+
+  const name = nameField.value.trim();
+  const email = emailField.value.trim();
+  const message = messageField.value.trim();
 
   if (!name || !email || !message) {
     alert("Bitte füllen Sie alle Felder aus.");
@@ -264,6 +264,12 @@ function sendMail() {
     "E-Mail: " + email + "\n\n" +
     "Nachricht:\n" + message;
 
+  /* ✅ FELDER LEEREN */
+  nameField.value = "";
+  emailField.value = "";
+  messageField.value = "";
+
+  /* ✅ MAIL ÖFFNEN */
   setTimeout(() => {
     window.location.href =
       "mailto:kapoorvy@gmail.com" +
@@ -275,3 +281,4 @@ function sendMail() {
 
 </body>
 </html>
+``

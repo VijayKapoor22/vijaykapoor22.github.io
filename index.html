@@ -76,7 +76,6 @@
     .contact-box.modern h3 {
       margin: 0 0 8px 0;
       font-size: 15px;
-      font-weight: 600;
       color: #ffffff;
     }
 
@@ -90,29 +89,23 @@
       font-size: 14px;
     }
 
-    .contact-box.modern textarea {
-      resize: none;
-    }
-
     .contact-box.modern button {
       width: 100%;
       padding: 7px;
-      font-size: 14px;
       background: #ffffff;
       color: #133d7a;
       border: none;
       border-radius: 6px;
-      cursor: pointer;
     }
 
+    /* ✅ FIXED FOOTER */
     .footer {
       position: fixed;
       left: 20px;
       bottom: 20px;
-      z-index: 9999;
       max-width: 520px;
-      background: rgba(255, 255, 255, 0.92);
-      padding: 6px 16px;
+      background: rgba(255,255,255,0.92);
+      padding: 8px 14px;
       border-radius: 8px;
       font-size: 14px;
       color: #0b3c78;
@@ -130,14 +123,12 @@
 
     .footer-line {
       margin-bottom: 4px;
-      white-space: nowrap;
     }
 
+    /* ✅ MOBILE */
     @media (max-width: 1024px) {
 
-      .hero {
-        padding: 20px;
-      }
+      .hero { padding: 20px; }
 
       .content {
         margin-left: 0;
@@ -145,35 +136,22 @@
         font-size: 16px;
       }
 
-      h1 {
-        font-size: 28px;
-      }
+      h1 { font-size: 28px; }
+      h2 { font-size: 20px; }
 
-      h2 {
-        font-size: 20px;
-      }
-
-      .trust-text {
-        font-size: 16px;
-      }
+      .trust-text { font-size: 16px; }
 
       .contact-box.modern {
         position: relative;
-        right: auto;
-        bottom: auto;
         width: 100%;
         margin-top: 20px;
       }
 
       .footer {
         position: relative;
-        left: auto;
-        bottom: auto;
+        left: 0;
+        bottom: 0;
         margin-top: 20px;
-      }
-
-      .footer-line {
-        white-space: normal;
       }
     }
 
@@ -195,16 +173,16 @@
 
     <p>
       Unsere Arbeit steht für streifenfreie Ergebnisse<br>
-      und faire, transparente Preise ab <strong>40&nbsp;€</strong>.
+      und faire Preise ab <strong>40&nbsp;€</strong>.
     </p>
 
     <div class="trust-text">
-      Sie zahlen erst, wenn Sie 100% zufrieden sind.
+      Sie zahlen erst, wenn Sie 100& zufrieden sind.
     </div>
 
     <p>
-      Kontaktieren Sie uns für ein unverbindliches<br>
-      Angebot und genießen Sie wieder klare Sicht.
+      Kontaktieren Sie uns für ein unverbindliches Angebot<br>
+      und genießen Sie wieder klare Sicht.
     </p>
 
     <h2>Unsere Leistungen</h2>
@@ -226,18 +204,20 @@
     <input id="name" type="text" placeholder="Name">
     <input id="email" type="email" placeholder="E-Mail-Adresse">
     <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
-    <button type="button" onclick="sendMail()">Nachricht senden</button>
+    <button onclick="sendMail()">Nachricht senden</button>
   </div>
 
   <div class="footer">
     <div class="footer-line">
-      datenschutz.htmlDatenschutz</a> ·
-      impressum.htmlImpressum</a>
+      <a href="datenschutz.html">Datenschutz</a> ·
+      <a href="impressum.html">Impressum</a>
     </div>
+
     <div class="footer-line">
       Kontakt:
-      kapoorvy@gmail.comkapoorvy@gmail.com</a> ·
-      tel:017038086670170&nbsp;380&nbsp;8667</a> · WhatsApp möglich
+      <a href="mailto:kapoorvy@gmail.com">kapoorvy@gmail.com</a> ·
+      <a href="tel:01703808667">0170&nbsp;380&nbsp;8667</a> ·
+      WhatsApp möglich
     </div>
   </div>
 
@@ -254,27 +234,20 @@ function sendMail() {
   const message = messageField.value.trim();
 
   if (!name || !email || !message) {
-    alert("Bitte füllen Sie alle Felder aus.");
+    alert("Bitte alle Felder ausfüllen.");
     return;
   }
 
-  const subject = "Fensterreinigung Anfrage";
-  const body =
-    "Name: " + name + "\n" +
-    "E-Mail: " + email + "\n\n" +
-    "Nachricht:\n" + message;
-
-  /* ✅ FELDER LEEREN */
   nameField.value = "";
   emailField.value = "";
   messageField.value = "";
 
-  /* ✅ MAIL ÖFFNEN */
   setTimeout(() => {
     window.location.href =
-      "mailto:kapoorvy@gmail.com" +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
+      "mailto:kapoorvy@gmail.com?subject=" +
+      encodeURIComponent("Fensterreinigung Anfrage") +
+      "&body=" +
+      encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
   }, 150);
 }
 </script>

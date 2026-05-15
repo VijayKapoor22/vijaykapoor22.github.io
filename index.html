@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -62,15 +61,54 @@
       color: #0b3c78;
     }
 
-    .contact-box.modern {
+    /* RECHTE SEITE FÜR BUTTON & FORMULAR */
+    .sidebar-right {
       position: absolute;
       right: 28px;
       bottom: 28px;
       width: 260px;
-      background: rgba(19, 61, 122, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* GOOGLE BUTTON STYLING */
+    .google-review-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.95);
+      color: #3c4043;
+      font-size: 13px;
+      font-weight: bold;
+      padding: 10px;
+      border: 1px solid #dadce0;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.2s;
+    }
+
+    .google-review-btn:hover {
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .google-g {
+      font-weight: bold;
+      font-size: 16px;
+      background: linear-gradient(to right, #4285F4 25%, #EA4335 25%, #EA4335 50%, #FBBC05 50%, #FBBC05 75%, #34A853 75%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-right: 8px;
+    }
+
+    .contact-box.modern {
+      background: rgba(13, 60, 120, 0.9);
       padding: 14px;
       border-radius: 10px;
       font-size: 14px;
+      width: 100%;
     }
 
     .contact-box.modern h3 {
@@ -96,6 +134,7 @@
       color: #133d7a;
       border: none;
       border-radius: 6px;
+      cursor: pointer;
     }
 
     /* ✅ FIXED FOOTER */
@@ -141,8 +180,10 @@
 
       .trust-text { font-size: 16px; }
 
-      .contact-box.modern {
+      .sidebar-right {
         position: relative;
+        right: 0;
+        bottom: 0;
         width: 100%;
         margin-top: 20px;
       }
@@ -177,9 +218,9 @@
     </p>
 
    
-<div class="trust-text">
-  Sie zahlen erst, wenn Sie zu <strong>100 % zufrieden</strong> sind.
-</div>
+    <div class="trust-text">
+      Sie zahlen erst, wenn Sie zu <strong>100 % zufrieden</strong> sind.
+    </div>
 
     <p>
       Kontaktieren Sie uns für ein unverbindliches Angebot<br>
@@ -200,12 +241,23 @@
     </ul>
   </div>
 
-  <div class="contact-box modern">
-    <h3>Direkt Nachricht senden</h3>
-    <input id="name" type="text" placeholder="Name">
-    <input id="email" type="email" placeholder="E-Mail-Adresse">
-    <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
-    <button onclick="sendMail()">Nachricht senden</button>
+  <!-- Rechte Sidebar für Google Button und Kontaktbox -->
+  <div class="sidebar-right">
+    
+    <!-- Google Bewertungs-Button -->
+    <a href="HIER_DEIN_GOOGLE_LINK_EINFÜGEN" target="_blank" class="google-review-btn">
+      <span class="google-g">G</span> Jetzt auf Google bewerten ⭐⭐⭐⭐⭐
+    </a>
+
+    <!-- Kontaktbox -->
+    <div class="contact-box modern">
+      <h3>Direkt Nachricht senden</h3>
+      <input id="name" type="text" placeholder="Name">
+      <input id="email" type="email" placeholder="E-Mail-Adresse">
+      <textarea id="message" rows="3" placeholder="Ihre Nachricht"></textarea>
+      <button onclick="sendMail()">Nachricht senden</button>
+    </div>
+    
   </div>
 
   <div class="footer">
@@ -255,4 +307,3 @@ function sendMail() {
 
 </body>
 </html>
-``

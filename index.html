@@ -72,35 +72,33 @@
       gap: 12px;
     }
 
-    /* GOOGLE BUTTON STYLING - MIT CACHE-BUSTER REFRESH */
+    /* GOOGLE BUTTON STYLING - NEUES KONTRASTDESIGN */
     .google-review-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #ffffff !important;
-      color: #202124 !important;
+      background: #1a73e8 !important;
+      color: #ffffff !important;
       font-size: 13px;
       font-weight: bold;
-      padding: 11px;
-      border: 2px solid #4285F4 !important;
+      padding: 12px;
+      border: none !important;
       border-radius: 10px;
       text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
       transition: all 0.2s ease-in-out;
     }
 
     .google-review-btn:hover {
-      background-color: #f8f9fa !important;
+      background-color: #1557b0 !important;
       transform: translateY(-1px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
-    .google-g {
+    .google-g-white {
       font-weight: bold;
       font-size: 16px;
-      background: linear-gradient(to right, #4285F4 25%, #EA4335 25%, #EA4335 50%, #FBBC05 50%, #FBBC05 75%, #34A853 75%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #ffffff;
       margin-right: 8px;
     }
 
@@ -245,9 +243,9 @@
   <!-- Rechte Sidebar für Google Button und Kontaktbox -->
   <div class="sidebar-right">
     
-    <!-- Google Bewertungs-Button (Echter, exakt funktionierender Suchlink auf Google Maps) -->
+    <!-- Google Bewertungs-Button mit direkter CID-Verknüpfung -->
     <a href="https://google.com" target="_blank" class="google-review-btn">
-      <span class="google-g">G</span> Jetzt auf Google bewerten ⭐⭐⭐⭐⭐
+      <span class="google-g-white">G</span> Jetzt auf Google bewerten ⭐⭐⭐⭐⭐
     </a>
 
     <!-- Kontaktbox -->

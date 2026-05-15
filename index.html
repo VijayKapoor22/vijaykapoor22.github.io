@@ -290,19 +290,25 @@ function sendMail() {
     return;
   }
 
+  // Text für den E-Mail-Inhalt vorbereiten
+  const subject = "Fensterreinigung Anfrage";
+  const body = "Name: " + name + "\nEmail: " + email + "\n\nNachricht:\n" + message;
+
+  // Felder nach dem Klick leeren
   nameField.value = "";
   emailField.value = "";
   messageField.value = "";
 
+  // Korrekter mailto-Link mit ?subject= und &body=
   setTimeout(() => {
     window.location.href =
-      "mailto:wirliebenfenster@://gmail.com" +
-      encodeURIComponent("Fensterreinigung Anfrage") +
-      "&body=" +
-      encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
+      "mailto:wirliebenfenster@gmail.com" +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
   }, 150);
 }
 </script>
+
 
 </body>
 </html>
